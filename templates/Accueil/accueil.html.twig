@@ -1,0 +1,117 @@
+{% block head %}
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WASTEELS Louka</title>
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+  {% endblock %}
+  {% block body %}
+  <body>
+    <div class="custom-cursor"></div>
+
+    <nav>
+      <a href="#discover">A propos</a>
+      <a href="#services">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 aria-label="Louka WASTEELS"></h1>
+        <p class="subtitle">Développeur Full-Stack Junior.</p>
+      </div>
+      <a href="#discover" class="hero-push-link">
+        <img src="../assets/down-arrow.svg" alt="arrow down" />
+      </a>
+    </section>
+
+    <main class="container">
+      <section id="discover" class="discover-section">
+        <h2>A propos de <span>moi !</span></h2>
+        <p class="section-subtitle discover-subtitle">Le commencement</p>
+
+        <div class="discover-content">
+          <div class="text-discover-content">
+            <h3></h3>
+            <p>
+              Actuellement je suis en deuxième année de BTS SIO (SLAM) au Lycée Saint-vincent à SENLIS,
+              J'ai pour objectif de continuer ma carrière dans le developpement web.
+              Pour cela je mets à disposition mes compétences et connaisances pour me perfectionner dans mon domaine et vous permettre de développer votre secteur d'activité.
+              
+            </p>
+            <a href="/contact" class="discover-link">
+              <span>Contactez moi !</span>
+              <img src="../assets/right-chevron.svg"/>
+            </a>
+          </div>
+          <img
+            src="../../assets/terre.png"
+            class="discover-main-img"
+          />
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Choisir un modèle.</h2>
+        <p class="section-subtitle">Ce qui vous convient.</p>
+
+        <div class="side-apparition-container">
+          <div class="side-slide-content">
+            <h3>Vitrine</h3>
+            <p>
+              Présentation générale de votre entreprise Un site dit » vitrine » 
+              permet de faire une présentation générale de votre entreprise en quelques pages 
+              (activités, produits/services, historique, coordonnées…).
+            </p>
+          </div>
+          <img src="../assets/side-1.jpg"/>
+        </div>
+
+        <div class="side-apparition-container">
+          <img src="../assets/side-2.jpg"/>
+          <div class="side-slide-content">
+            <h3>E-commerce</h3>
+            <p>
+              Nous concevons pour vous des solutions e-commerce avec paiement sécurisé complètement modulables.
+               Entièrement paramétrable, votre e-commerce vous donne la possibilité d’ajouter, 
+               de modifier et de supprimer vos produits grâce à votre interface d’administration sécurisée.
+            </p>
+          </div>
+        </div>
+
+        <div class="side-apparition-container">
+          <div class="side-slide-content">
+            <h3>Maquette Design</h3>
+            <p>
+              Quelle que soit la taille de votre structure, agence de communication, 
+              agence web, PME, association, particulier ou collectivité, nous trouverons ensemble 
+              une solution adaptée à vos besoins.
+            </p>
+          </div>
+          <img src="../assets/side-3.jpg"/>
+        </div>
+              <div id="headerFoo"></div>
+      <div id="FooterMain">
+        <a href="/contact" class="footerInfo" id="discover-link-2">
+          Contactez moi ! 
+        </a>
+      </div>
+      <div id="headerFoo"></div>
+      </section>
+    </main>
+
+    <script src="../../JS/app.js"></script>
+  </body>
+  {% endblock %}
+</html>

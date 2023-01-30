@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WASTEELS Louka</title>
+    <link rel="stylesheet" href="../../CSS/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+  {% endblock %}
+
+
+{% block body %}
+
+    <div class="container">
+        {{form_start(formulaire, {'attr': {'novalidate': 
+        'novalidate'}})}}
+
+        <div class="form-group">{{form_row(formulaire.nom)}}</div>
+        {{form_row(formulaire.prenom)}}
+        {{form_row(formulaire.email)}}
+        {{form_row(formulaire.message)}}
+
+        <button type="submit">Envoyer !</button>
+        {{form_end(formulaire)}}
+    </div>
+
+{% endblock %}
