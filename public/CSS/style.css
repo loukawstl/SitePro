@@ -228,6 +228,17 @@ section h2 span {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #f1f1f168;
+  transition: 700ms;
+}
+.discover-link:hover{
+  color: white;
+  transition: 700ms;
+  border: 1px solid white!important;
+}
+#discover-link-2:hover{
+  color: white;
+  transition: 700ms;
+  border: 1px solid white!important;
 }
 #discover-link-2{
     /* font-family: ; */
@@ -238,7 +249,7 @@ section h2 span {
     background: transparent;
     align-items: center;
     border: 1px solid #f1f1f168;
-    margin: 0 40% 20 40%;
+    margin: 0 40% 0 40%;
 }
 .discover-link img {
   width: 15px;
@@ -382,3 +393,64 @@ a .footerInfo:hover{
   margin-top: 10px;
   text-decoration: none;
 }
+.footer{
+  background: #111;
+  padding:10px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+  i{
+    color: gray;
+    transition:0.5s;
+  }
+  i:hover{
+    color: white;
+    transition:0.5s;
+  }

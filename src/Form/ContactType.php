@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Form;
-
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -13,10 +14,30 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nom')
-            ->add('prenom')
-            ->add('email', EmailType::class)
-            ->add('message')
+            ->add('nom', TextType::class, [
+                'attr' => [
+                    'class' => 'InputContact',
+                    'placeholder' => 'John...'
+                ]
+            ])
+            ->add('prenom', TextType::class, [
+                'attr' => [
+                    'class' => 'InputContact',
+                    'placeholder' => 'McClain...'
+                ]
+            ])
+            ->add('email', EmailType::class, [
+                'attr' => [
+                    'class' => 'InputContact',
+                    'placeholder' => 'johnmcclain@gmail.com...'
+                ]
+            ])
+            ->add('message', TextareaType::class,[
+                'attr' => [
+                    'class' => 'InputContact',
+                    'placeholder' => 'Yippee-ki-yay'
+                ]
+            ])
         ;
     }
 
@@ -27,3 +48,4 @@ class ContactType extends AbstractType
         ]);
     }
 }
+?>

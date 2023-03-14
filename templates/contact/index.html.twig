@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>WASTEELS Louka</title>
-    <link rel="stylesheet" href="../../CSS/contact.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"/>
@@ -19,18 +17,22 @@
 
 
 {% block body %}
-
+    <h1>CONTACTEZ-MOI!</h1>
     <div class="container">
-        {{form_start(formulaire, {'attr': {'novalidate': 
-        'novalidate'}})}}
 
-        <div class="form-group">{{form_row(formulaire.nom)}}</div>
-        {{form_row(formulaire.prenom)}}
-        {{form_row(formulaire.email)}}
-        {{form_row(formulaire.message)}}
-
-        <button type="submit">Envoyer !</button>
-        {{form_end(formulaire)}}
+        {{ form_start(formulaire) }}
+        <div class="form-top">
+            {{ form_widget(formulaire.nom, {'attr':{'class': 'InputTop'}}) }}
+            {{ form_widget(formulaire.prenom, {'attr':{'class': 'InputTop'}}) }}
+        </div>
+        <div class="form-bottom">
+            {{ form_widget(formulaire.email, {'attr':{'class': 'InputBottom'}}) }}
+            {{ form_widget(formulaire.message, {'attr':{'class': 'TextareaBottom'}}) }}
+        </div>
+            {{ form_rest(formulaire) }}
+            <button type="submit" class="btnEnvoyer">Envoyer</button>
+            <a href="/" class="retour">Retour</a>
+        {{ form_end(formulaire) }}
     </div>
 
 {% endblock %}

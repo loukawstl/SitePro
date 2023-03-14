@@ -1,3 +1,56 @@
-.container{
-    background-color: red;
+body {
+    font-family: Montserrat, Helvetica, sans-serif;
+    background-color: #111;margin: 10%;
+  }
+  h1{
+    text-align: center;
+    color: gray;
+    margin-bottom: 50px;
+  }
+  .container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
+
+.form-bottom{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;    
+}
+::placeholder{
+    font-weight: bold;
+}
+.InputTop{
+    border: none;
+    border-bottom: 2px solid gray;
+    margin-right: 8px;
+    background: #111;
+    color: gray;
+    
+}
+.InputBottom{
+    border: none;
+    border-bottom: 2px solid gray;
+    margin-top: 30px;
+    background: #111;
+}
+.TextareaBottom{
+    height: 40px;
+    min-width: 100%;
+    max-width: 290px;
+    border: none;
+    border-bottom: 2px solid gray;
+    background: #111;
+    margin-top: 30px;
+}
+.btnEnvoyer{
+    background-color: grey;
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 70px;
+    height: 30px;
+}
+
